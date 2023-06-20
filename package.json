@@ -1,0 +1,29 @@
+{
+  "name": "tracing-lib",
+  "version": "1.0.0",
+  "description": "OpenTelemetry API Wrapper",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --out docs/markdown src/index.ts",
+    "docs:html": "typedoc --out docs/html src/index.ts"
+  },
+  "author": "Francisco Braço-Forte",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.2.6",
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-markdown": "^3.15.3",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.3.0",
+    "@opentelemetry/context-async-hooks": "1.14.0",
+    "@opentelemetry/core": "1.14.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.40.0",
+    "@opentelemetry/resources": "1.14.0",
+    "@opentelemetry/sdk-trace-base": "1.14.0",
+    "@opentelemetry/sdk-trace-node": "1.14.0",
+    "@opentelemetry/semantic-conventions": "1.14.0"
+  }
+}
