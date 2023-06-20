@@ -1,0 +1,36 @@
+version: "3.9"
+
+# Services
+services:
+  # Jaeger
+  jaeger:
+    container_name: jaeger
+    image: jaegertracing/all-in-one:latest
+    restart: always
+    networks:
+      - telemetry
+    ports:
+      - 16686:16686 # frontend query
+      - 14250:14250 # receive traces from otl collector
+
+  # Opentelemetry
+  otlp:
+    container_name: otlp
+    image: otel/opentelemetry-collector:${OTEL_VERSION}
+    restart: always
+    networks:
+      - telemetry
+    command: [ "--config=/etc/otel-config.yaml" ]
+    volumes:
+      - ./otel-config.yaml:/etc/otel-config.yaml
+    ports:
+      - 4318:4318   # OTLP HTTP receiver
+    depends_on:
+      - jaeger
+
+# Networks
+networks:
+  telemetry:
+    name: telemetry
+    driver: bridge
+
