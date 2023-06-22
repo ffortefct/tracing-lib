@@ -127,7 +127,7 @@ async function middleware(
   next: NextFunction
 ): Promise<void> {
   tracer.startAsyncSpan(
-    "middleware-spoofer", 
+    `middleware-spoofer: endpoint ${req.path}`, 
     async (ms: ModularSpan): Promise<void> => await extractMessage(req, res, next, ms));
 }
 
