@@ -81,7 +81,7 @@ async function foo1(): Promise<void> {
 async function foo2(): Promise<void> {
   try {
     await tracer.startAsyncSpan(
-      "foo2", async (_): Promise<void> => {
+      "foo2", async (_: ModularSpan): Promise<void> => {
         throw Error("this is a error test");
     }, {opts: {attributes: {"throws.error": "some error"}}});
   } catch (e: any) {
@@ -94,7 +94,7 @@ async function foo2(): Promise<void> {
 
 async function foo3(): Promise<void> {
   await tracer.startAsyncSpan(
-    "foo3", async (_): Promise<void> => {
+    "foo3", async (_: ModularSpan): Promise<void> => {
       await foo1();
       await foo2();
   });
@@ -102,7 +102,7 @@ async function foo3(): Promise<void> {
 
 async function foo4(): Promise<void> {
   await tracer.startAsyncSpan(
-    "foo4", async (_): Promise<void> => {
+    "foo4", async (_: ModularSpan): Promise<void> => {
       await foo1();
       await foo3();
   });
@@ -139,7 +139,7 @@ router.get("/e1", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
     await tracer.startAsyncSpan(
-      "e1", async (_): Promise<void> => {
+      "e1", async (_: ModularSpan): Promise<void> => {
         await foo1();
     });
     res.sendStatus(200);
@@ -149,7 +149,7 @@ router.get("/e2", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
     await tracer.startAsyncSpan(
-      "e2", async (_): Promise<void> => {
+      "e2", async (_: ModularSpan): Promise<void> => {
       await foo3();
     });
     res.sendStatus(201);
@@ -159,7 +159,7 @@ router.get("/e3", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
     await tracer.startAsyncSpan(
-      "e3", async (_): Promise<void> => {
+      "e3", async (_: ModularSpan): Promise<void> => {
       await foo4();
     });
     res.sendStatus(404);
