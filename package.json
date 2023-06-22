@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --out docs/markdown src/index.ts",
-    "docs:html": "typedoc --out docs/html src/index.ts"
+    "docs:markdown": "typedoc --excludePrivate --plugin typedoc-plugin-markdown --out docs/markdown src/index.ts",
+    "docs:html": "typedoc --excludePrivate --out docs/html src/index.ts"
   },
   "author": "Francisco Braço-Forte",
   "license": "MIT",

@@ -6,103 +6,16 @@ Represents a wrapper of [@opentelemetry/api.Tracer](https://open-telemetry.githu
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](ModularTracer.md#constructor)
-
-### Properties
-
-- [tracer](ModularTracer.md#tracer)
-- [instances](ModularTracer.md#instances)
-- [traceProvider](ModularTracer.md#traceprovider)
-
 ### Methods
 
-- [createSpan](ModularTracer.md#createspan)
 - [currentContext](ModularTracer.md#currentcontext)
 - [marshallContext](ModularTracer.md#marshallcontext)
-- [recordException](ModularTracer.md#recordexception)
 - [startAsyncSpan](ModularTracer.md#startasyncspan)
 - [unmarshallContext](ModularTracer.md#unmarshallcontext)
 - [get](ModularTracer.md#get)
 - [setup](ModularTracer.md#setup)
 
-## Constructors
-
-### constructor
-
-• `Private` **new ModularTracer**(`name`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-
-#### Defined in
-
-src/telemetry/tracer.ts:116
-
-## Properties
-
-### tracer
-
-• `Private` **tracer**: `Tracer`
-
-#### Defined in
-
-src/telemetry/tracer.ts:38
-
-___
-
-### instances
-
-▪ `Static` `Private` **instances**: `Map`<`string`, [`ModularTracer`](ModularTracer.md)\>
-
-#### Defined in
-
-src/telemetry/tracer.ts:41
-
-___
-
-### traceProvider
-
-▪ `Static` `Private` **traceProvider**: `NodeTracerProvider`
-
-#### Defined in
-
-src/telemetry/tracer.ts:40
-
 ## Methods
-
-### createSpan
-
-▸ `Private` **createSpan**(`name`, `fn`, `opts?`, `ctx?`): `Promise`<`any`\>
-
-Creates a new span associated with its parent.
-
-**`Remarks`**
-
-Returns an independent span if there isn't a parent in the current context.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `fn` | (`span`: `Span`) => `Promise`<`any`\> |
-| `opts?` | `SpanOptions` |
-| `ctx?` | `Context` |
-
-#### Returns
-
-`Promise`<`any`\>
-
-#### Defined in
-
-src/telemetry/tracer.ts:137
-
-___
 
 ### currentContext
 
@@ -133,29 +46,6 @@ Converts the current active context to an JSON object.
 #### Defined in
 
 src/telemetry/tracer.ts:205
-
-___
-
-### recordException
-
-▸ `Private` **recordException**(`span`, `e`): `void`
-
-Records an error in a given span and sets the error status.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `span` | `Span` |
-| `e` | `any` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-src/telemetry/tracer.ts:123
 
 ___
 

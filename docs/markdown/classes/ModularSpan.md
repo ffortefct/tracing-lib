@@ -14,11 +14,6 @@ The main purpose is to implicitly finalize the span.
 
 - [constructor](ModularSpan.md#constructor)
 
-### Properties
-
-- [ended](ModularSpan.md#ended)
-- [span](ModularSpan.md#span)
-
 ### Methods
 
 - [end](ModularSpan.md#end)
@@ -42,26 +37,6 @@ The main purpose is to implicitly finalize the span.
 #### Defined in
 
 src/telemetry/span.ts:13
-
-## Properties
-
-### ended
-
-• `Private` **ended**: `boolean` = `false`
-
-#### Defined in
-
-src/telemetry/span.ts:11
-
-___
-
-### span
-
-• `Private` **span**: `Span`
-
-#### Defined in
-
-src/telemetry/span.ts:10
 
 ## Methods
 
