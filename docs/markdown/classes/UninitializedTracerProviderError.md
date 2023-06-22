@@ -1,4 +1,4 @@
-[tracing-lib](../README.md) / [Exports](../modules.md) / UninitializedTracerProviderError
+[@ffortefct/tracing-lib](../README.md) / [Exports](../modules.md) / UninitializedTracerProviderError
 
 # Class: UninitializedTracerProviderError
 

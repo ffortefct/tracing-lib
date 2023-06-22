@@ -10,7 +10,7 @@ import {
 import {
   ModularTracer,
   ModularSpan,
-} from "tracing-lib";
+} from "@ffortefct/tracing-lib";
 
 // < ------ helpers ------ >
 
@@ -83,7 +83,7 @@ async function foo2(): Promise<void> {
     await tracer.startAsyncSpan(
       "foo2", async (_): Promise<void> => {
         throw Error("this is a error test");
-    });
+    }, {opts: {attributes: {"throws.error": "some error"}}});
   } catch (e: any) {
     await tracer.startAsyncSpan(
       "foo2-catch", async (ms: ModularSpan): Promise<void> => {

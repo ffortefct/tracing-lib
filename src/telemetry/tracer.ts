@@ -151,8 +151,8 @@ class ModularTracer {
      *
      * @param name - span identifier.
      * @param fn - function tied to the span.
-     * @param [endSpan=true] - tells if the span should be ended internaly or not.
      * @param [options={}]  - additional parameters to attach at span creation.
+     * @param [endSpan=true] - tells if the span should be ended internaly or not.
      * @param [rethrow=true]  - indicates if the catched exception should be rethrow or not.
      *
      * @return the result of fn.
@@ -165,8 +165,8 @@ class ModularTracer {
     public async startAsyncSpan(
         name: string, 
         fn: (ms: ModularSpan) => Promise<any>,
-        endSpan: boolean = true,
         options: Options = {},
+        endSpan: boolean = true,
         rethrow: boolean = true,
     ): Promise<any> {
         let error: Error | undefined;

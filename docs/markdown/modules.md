@@ -1,6 +1,6 @@
-[tracing-lib](README.md) / Exports
+[@ffortefct/tracing-lib](README.md) / Exports
 
-# tracing-lib
+# @ffortefct/tracing-lib
 
 ## Table of contents
 

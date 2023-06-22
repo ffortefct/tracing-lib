@@ -1,4 +1,4 @@
-[tracing-lib](../README.md) / [Exports](../modules.md) / Options
+[@ffortefct/tracing-lib](../README.md) / [Exports](../modules.md) / Options
 
 # Interface: Options
 

@@ -1,4 +1,4 @@
-[tracing-lib](../README.md) / [Exports](../modules.md) / TracerProviderError
+[@ffortefct/tracing-lib](../README.md) / [Exports](../modules.md) / TracerProviderError
 
 # Class: TracerProviderError
 

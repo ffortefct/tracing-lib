@@ -1,4 +1,4 @@
-[tracing-lib](../README.md) / [Exports](../modules.md) / ModularSpan
+[@ffortefct/tracing-lib](../README.md) / [Exports](../modules.md) / ModularSpan
 
 # Class: ModularSpan
 
@@ -87,7 +87,7 @@ This function does nothing on further calls.
 
 #### Defined in
 
-src/telemetry/span.ts:60
+src/telemetry/span.ts:64
 
 ___
 
@@ -124,6 +124,8 @@ See [@opentelemetry/api.Span.setAttribute](https://open-telemetry.github.io/open
 
 Semantic conventions on attributes are important to describe operations on a given span. Take a look [here](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/). The [@opentelemetry/semantic-conventions.SemanticAttributes](https://open-telemetry.github.io/opentelemetry-js/modules/_opentelemetry_semantic_conventions.html#SemanticAttributes) constant contains those names. See a little example explained [here](https://opentelemetry.io/docs/instrumentation/js/manual/#semantic-attributes).
 
+Important note: [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/).
+
 #### Parameters
 
 | Name | Type |
@@ -137,7 +139,7 @@ Semantic conventions on attributes are important to describe operations on a giv
 
 #### Defined in
 
-src/telemetry/span.ts:40
+src/telemetry/span.ts:42
 
 ___
 
@@ -151,6 +153,8 @@ See [@opentelemetry/api.Span.setAttributes](https://open-telemetry.github.io/ope
 
 Semantic conventions on attributes are important to describe operations on a given span. Take a look [here](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/). The [@opentelemetry/semantic-conventions.SemanticAttributes](https://open-telemetry.github.io/opentelemetry-js/modules/_opentelemetry_semantic_conventions.html#SemanticAttributes) constant contains those names. See a little example explained [here](https://opentelemetry.io/docs/instrumentation/js/manual/#semantic-attributes).
 
+Important note: [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/).
+
 #### Parameters
 
 | Name | Type |
@@ -163,7 +167,7 @@ Semantic conventions on attributes are important to describe operations on a giv
 
 #### Defined in
 
-src/telemetry/span.ts:50
+src/telemetry/span.ts:54
 
 ___
 

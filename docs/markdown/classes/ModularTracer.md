@@ -1,4 +1,4 @@
-[tracing-lib](../README.md) / [Exports](../modules.md) / ModularTracer
+[@ffortefct/tracing-lib](../README.md) / [Exports](../modules.md) / ModularTracer
 
 # Class: ModularTracer
 
@@ -161,7 +161,7 @@ ___
 
 ### startAsyncSpan
 
-▸ **startAsyncSpan**(`name`, `fn`, `endSpan?`, `options?`, `rethrow?`): `Promise`<`any`\>
+▸ **startAsyncSpan**(`name`, `fn`, `options?`, `endSpan?`, `rethrow?`): `Promise`<`any`\>
 
 Creates a new span and calls fn inside it.
 
@@ -177,8 +177,8 @@ If this [startAsyncSpan](ModularTracer.md#startasyncspan) isn't called inside an
 | :------ | :------ | :------ | :------ |
 | `name` | `string` | `undefined` | span identifier. |
 | `fn` | (`ms`: [`ModularSpan`](ModularSpan.md)) => `Promise`<`any`\> | `undefined` | function tied to the span. |
-| `endSpan?` | `boolean` | `true` | tells if the span should be ended internaly or not. |
 | `options?` | [`Options`](../interfaces/Options.md) | `{}` | additional parameters to attach at span creation. |
+| `endSpan?` | `boolean` | `true` | tells if the span should be ended internaly or not. |
 | `rethrow?` | `boolean` | `true` | indicates if the catched exception should be rethrow or not. |
 
 #### Returns

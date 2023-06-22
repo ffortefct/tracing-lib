@@ -36,6 +36,8 @@ class ModularSpan {
      * 
      * @remarks
      * Semantic conventions on attributes are important to describe operations on a given span. Take a look [here](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/). The [@opentelemetry/semantic-conventions.SemanticAttributes](https://open-telemetry.github.io/opentelemetry-js/modules/_opentelemetry_semantic_conventions.html#SemanticAttributes) constant contains those names. See a little example explained [here](https://opentelemetry.io/docs/instrumentation/js/manual/#semantic-attributes).
+     *
+     * Important note: [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/).
      */
     public setAttribute(k: string, v: otel.AttributeValue): void {
         this.span.setAttribute(k , v);
@@ -46,6 +48,8 @@ class ModularSpan {
      * 
      * @remarks
      * Semantic conventions on attributes are important to describe operations on a given span. Take a look [here](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/). The [@opentelemetry/semantic-conventions.SemanticAttributes](https://open-telemetry.github.io/opentelemetry-js/modules/_opentelemetry_semantic_conventions.html#SemanticAttributes) constant contains those names. See a little example explained [here](https://opentelemetry.io/docs/instrumentation/js/manual/#semantic-attributes).
+     *
+     * Important note: [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/).
      */
     public setAttributes(vs: otel.Attributes): void {
         this.span.setAttributes(vs);
