@@ -138,21 +138,30 @@ app.use(middleware);
 router.get("/e1", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
-    await foo1();
+    await tracer.startAsyncSpan(
+      "e1", async (_): Promise<void> => {
+        await foo1();
+    });
     res.sendStatus(200);
 });
 
 router.get("/e2", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
-    await foo3();
+    await tracer.startAsyncSpan(
+      "e2", async (_): Promise<void> => {
+      await foo3();
+    });
     res.sendStatus(201);
 });
 
 router.get("/e3", async (
   _: express.Request,
   res: express.Response): Promise<void> => {
-    await foo4();
+    await tracer.startAsyncSpan(
+      "e3", async (_): Promise<void> => {
+      await foo4();
+    });
     res.sendStatus(404);
 });
 
