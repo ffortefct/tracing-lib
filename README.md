@@ -18,11 +18,13 @@ For example, imagine that you create the following nested spans (see an example 
 
 The tracer tree will have the following format:
 
+```
 s1 (span root)
 |
 s2
 |
 s3
+```
 
 ### Installation
 
