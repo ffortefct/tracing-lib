@@ -44,7 +44,7 @@ You only need to initialize one type since it has global state.
 ```typescript
 import { ModularTracer } from "@ffortefct/tracing-lib";
 
-const moduleNmarshallContextame = "whatever-you-want";
+const moduleName = "whatever-you-want";
 const collector = "otlp-collector:4318";
 // You can ommit the collector's address. It uses localhost:4318 by default.
 ModularTracer.setup(moduleName, collector);
