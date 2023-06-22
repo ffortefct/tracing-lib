@@ -16,7 +16,7 @@ Simply put, spans are single units of work (e.g., querying a database), while tr
 Every span has an internal context to keep track of its state. This context can be obtained to explicitly correlate spans. See [Propagation](#propagation) section.
 For example, imagine that you create the following nested spans (see an example in [Create Spans](#create-spans) section): `s1`, `s2` inside `s1` and `s3` inside `s2`.
 
-The tracer tree will have the following format:
+The trace tree will have the following format:
 
 ```
 s1 (span root)
