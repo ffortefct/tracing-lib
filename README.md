@@ -1,11 +1,11 @@
 ### OpenTelemetry Node.js API wrapper
 
 Automates its initialization and abstracts some boilerplate at span creation.
-Documentation in markdown is [here](docs/markdown/modules.md). There's also a [html](docs/html) version of it (this isn't hosted). 
+Documentation is [here](#!).
 
 ### Example
 
-There's a [demo](examples/README.md) which use express.
+There's a demo in the `examples` folder which use express.
 
 ### Traces vs Spans
 
@@ -64,7 +64,7 @@ const tracer: ModularTracer = ModularTracer.get("whatever-you-want");
 
 Read the [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/) to see limitations and accepted types.
 
-If some error is thrown inside a span function, it registers the traceback in the span' log. The exception is rethrown by default ([demo](examples/demo.ts) has an example of it).
+If some error is thrown inside a span function, it registers the traceback in the span' log. The exception is rethrown by default (`demo` has an example of it).
 
 ```typescript
 import { ModularSpan } from "@ffortefct/tracing-lib";
