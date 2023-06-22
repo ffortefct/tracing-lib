@@ -14,6 +14,7 @@
 <h2>@ffortefct/tracing-lib</h2></div>
 <div class="tsd-panel tsd-typography"><a id="md:opentelemetry-nodejs-api-wrapper" class="tsd-anchor"></a><h3><a href="#md:opentelemetry-nodejs-api-wrapper">OpenTelemetry Node.js API wrapper</a></h3><p>Automates its initialization and abstracts some boilerplate at span creation.
 Documentation in markdown is <a href="docs/markdown/modules.md">here</a>. There&#39;s also a <a href="docs/html">html</a> version of it (this isn&#39;t hosted). </p>
+<a id="md:example" class="tsd-anchor"></a><h3><a href="#md:example">Example</a></h3><p>There&#39;s a <a href="examples/README.md">demo</a> which use express.</p>
 <a id="md:traces-vs-spans" class="tsd-anchor"></a><h3><a href="#md:traces-vs-spans">Traces vs Spans</a></h3><p>Simply put, spans are single units of work (e.g., querying a database), while traces are collections of them.</p>
 <a id="md:context" class="tsd-anchor"></a><h3><a href="#md:context">Context</a></h3><p>Every span has an internal context to keep track of its state. This context can be obtained to explicitly correlate spans. See <a href="#propagation">Propagation</a> section.
 For example, imagine that you create the following nested spans (see an example in <a href="#create-spans">Create Spans</a> section): <code>s1</code>, <code>s2</code> inside <code>s1</code> and <code>s3</code> inside <code>s2</code>.</p>
@@ -69,9 +70,10 @@ Check this step-by-step <a href="https://opentelemetry.io/docs/instrumentation/j
 <li><a href="#md:opentelemetry-nodejs-api-wrapper"><span>Open<wbr/>Telemetry <wbr/>Node.js API wrapper</span></a></li>
 <li>
 <ul>
-<li><a href="#md:traces-vs-spans"><span>Traces vs <wbr/>Spans</span></a></li>
+<li><a href="#md:example"><span>Example</span></a></li>
 <li>
 <ul>
+<li><a href="#md:traces-vs-spans"><span>Traces vs <wbr/>Spans</span></a></li>
 <li><a href="#md:context"><span>Context</span></a></li>
 <li><a href="#md:installation"><span>Installation</span></a></li>
 <li><a href="#md:instrumenting"><span>Instrumenting</span></a></li>

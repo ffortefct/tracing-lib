@@ -51,7 +51,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Context</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/telemetry/tracer.ts:198</li></ul></aside></li></ul></section>
+<li>Defined in src/telemetry/tracer.ts:197</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="marshallContext" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>marshall<wbr/>Context</span><a href="#marshallContext" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -62,7 +62,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/telemetry/tracer.ts:205</li></ul></aside></li></ul></section>
+<li>Defined in src/telemetry/tracer.ts:204</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="startAsyncSpan" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>start<wbr/>Async<wbr/>Span</span><a href="#startAsyncSpan" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -113,11 +113,10 @@
 
 <div class="tsd-comment tsd-typography">
 <h4>Remarks</h4><p>You don&#39;t need to explicitly end the span, this function does it for you.
-If startSpan was called inside a context without a parent span associated to this tracer, it creates a new indepentent span.
-If this <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyncSpan</a> isn&#39;t called inside an active span, it creates an indepentent one.</p>
+If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyncSpan</a> isn&#39;t called inside an active span (without options.ctx set), it creates an indepentent one.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/telemetry/tracer.ts:165</li></ul></aside></li></ul></section>
+<li>Defined in src/telemetry/tracer.ts:164</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="unmarshallContext" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>unmarshall<wbr/>Context</span><a href="#unmarshallContext" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -133,7 +132,7 @@ If this <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">star
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Context</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in src/telemetry/tracer.ts:216</li></ul></aside></li></ul></section>
+<li>Defined in src/telemetry/tracer.ts:215</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="get" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>get</span><a href="#get" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">

@@ -159,8 +159,7 @@ class ModularTracer {
      * 
      * @remarks
      * You don't need to explicitly end the span, this function does it for you.
-     * If startSpan was called inside a context without a parent span associated to this tracer, it creates a new indepentent span.
-     * If this {@link startAsyncSpan} isn't called inside an active span, it creates an indepentent one.
+     * If {@link startAsyncSpan} isn't called inside an active span (without options.ctx set), it creates an indepentent one.
      */
     public async startAsyncSpan(
         name: string, 

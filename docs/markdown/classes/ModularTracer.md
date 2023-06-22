@@ -29,7 +29,7 @@ Returns the current active context.
 
 #### Defined in
 
-src/telemetry/tracer.ts:198
+src/telemetry/tracer.ts:197
 
 ___
 
@@ -45,7 +45,7 @@ Converts the current active context to an JSON object.
 
 #### Defined in
 
-src/telemetry/tracer.ts:205
+src/telemetry/tracer.ts:204
 
 ___
 
@@ -58,8 +58,7 @@ Creates a new span and calls fn inside it.
 **`Remarks`**
 
 You don't need to explicitly end the span, this function does it for you.
-If startSpan was called inside a context without a parent span associated to this tracer, it creates a new indepentent span.
-If this [startAsyncSpan](ModularTracer.md#startasyncspan) isn't called inside an active span, it creates an indepentent one.
+If [startAsyncSpan](ModularTracer.md#startasyncspan) isn't called inside an active span (without options.ctx set), it creates an indepentent one.
 
 #### Parameters
 
@@ -79,7 +78,7 @@ the result of fn.
 
 #### Defined in
 
-src/telemetry/tracer.ts:165
+src/telemetry/tracer.ts:164
 
 ___
 
@@ -101,7 +100,7 @@ Tries to parse the JSON object and extracts the context, associating to the curr
 
 #### Defined in
 
-src/telemetry/tracer.ts:216
+src/telemetry/tracer.ts:215
 
 ___
 
