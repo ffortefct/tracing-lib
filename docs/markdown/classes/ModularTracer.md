@@ -79,7 +79,7 @@ src/telemetry/tracer.ts:40
 
 ▸ `Private` **createSpan**(`name`, `fn`, `opts?`, `ctx?`): `Promise`<`any`\>
 
-Creates a new span associated to its parent.
+Creates a new span associated with its parent.
 
 **`Remarks`**
 

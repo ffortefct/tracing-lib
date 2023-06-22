@@ -24,7 +24,9 @@ s3
 
 ### Installation
 
-TODTODOO
+```sh
+yarn add @ffortefct/tracing-lib
+```
 
 ### Instrumenting
 

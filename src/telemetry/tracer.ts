@@ -129,7 +129,7 @@ class ModularTracer {
     }
 
     /**
-     * Creates a new span associated to its parent.
+     * Creates a new span associated with its parent.
      *
      * @remarks
      * Returns an independent span if there isn't a parent in the current context.
