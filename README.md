@@ -34,7 +34,7 @@ yarn add @ffortefct/tracing-lib
 
 ### Instrumenting
 
-I'll give you a brief insight on how to insturment your code using this wrapper, since the logic is practically the same as the official API.
+I'll give you a brief insight on how to instrument your code using this wrapper, since the logic is practically the same as the official API.
 Check this step-by-step [guide](https://opentelemetry.io/docs/instrumentation/js/manual/) to know more.
 
 #### Setup
