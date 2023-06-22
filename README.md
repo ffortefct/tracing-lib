@@ -1,7 +1,7 @@
 ### OpenTelemetry Node.js API wrapper
 
 Automates its initialization and abstracts some boilerplate at span creation.
-Documentation is [here](#!).
+Documentation is [here](https://ffortefct.github.io/tracing-lib/).
 
 ### Example
 
