@@ -72,7 +72,7 @@ async function extractMessage(
 // < ------ span producers ------ >
 
 async function foo1(): Promise<void> {
-  tracer.startAsyncSpan(
+  await tracer.startAsyncSpan(
     "foo1", async (ms: ModularSpan): Promise<void> => {
       ms.setAttributes({integer: 1, float: 2.});
   });
@@ -128,7 +128,7 @@ async function middleware(
 ): Promise<void> {
   tracer.startAsyncSpan(
     "middleware-spoofer", 
-    (ms: ModularSpan): Promise<void> => extractMessage(req, res, next, ms));
+    async (ms: ModularSpan): Promise<void> => await extractMessage(req, res, next, ms));
 }
 
 app.use(middleware);
