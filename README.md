@@ -3,6 +3,10 @@
 Automates its initialization and abstracts some boilerplate at span creation.
 Documentation in markdown is [here](docs/markdown/modules.md). There's also a [html](docs/html) version of it (this isn't hosted). 
 
+### Example
+
+There's a [demo](examples/README.md) which use express.
+
 ### Traces vs Spans
 
 Simply put, spans are single units of work (e.g., querying a database), while traces are collections of them.
