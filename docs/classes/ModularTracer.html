@@ -106,14 +106,14 @@
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">rethrow</span>: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
-<div class="tsd-comment tsd-typography"><p>indicates if the catched exception should be rethrow or not.</p>
+<div class="tsd-comment tsd-typography"><p>indicates if the catched exception should be rethrown or not.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><p>the result of fn.</p>
 
 <div class="tsd-comment tsd-typography">
 <h4>Remarks</h4><p>You don&#39;t need to explicitly end the span, this function does it for you.
-If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyncSpan</a> isn&#39;t called inside an active span (without options.ctx set), it creates an indepentent one.</p>
+If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyncSpan</a> isn&#39;t called inside an active span (without Options.ctx set), it creates an indepentent one.</p>
 </div><aside class="tsd-sources">
 <ul>
 <li>Defined in src/telemetry/tracer.ts:164</li></ul></aside></li></ul></section>
@@ -148,7 +148,7 @@ If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyn
 <div class="tsd-comment tsd-typography"><p>tracer name.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="ModularTracer.html" class="tsd-signature-type tsd-kind-class">ModularTracer</a></h4><p>a ModularTracer.</p>
+<h4 class="tsd-returns-title">Returns <a href="ModularTracer.html" class="tsd-signature-type tsd-kind-class">ModularTracer</a></h4><p>an instance of ModularTracer.</p>
 
 <div class="tsd-comment tsd-typography">
 <h4>Throws</h4><p><a href="UninitializedTracerProviderError.html" class="tsd-kind-class">UninitializedTracerProviderError</a> if <a href="ModularTracer.html#setup" class="tsd-kind-method">setup</a> wasn&#39;t called yet.</p>
@@ -160,7 +160,7 @@ If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyn
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="setup.setup-1"><span class="tsd-kind-call-signature">setup</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">moduleName</span>, <span class="tsd-kind-parameter">host</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setup.setup-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Initializes the tracer provider and its OTEL exporter.</p>
+<div class="tsd-comment tsd-typography"><p>Initializes the tracer provider and its OpenTelemetry exporter.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -172,15 +172,15 @@ If <a href="ModularTracer.html#startAsyncSpan" class="tsd-kind-method">startAsyn
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">host</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p><code>&lt;host&gt;:&lt;port&gt;</code> of the OTEL collector.</p>
+<div class="tsd-comment tsd-typography"><p><code>&lt;host&gt;:&lt;port&gt;</code> of the OpenTelemetry Collector.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography">
 <h4>Throws</h4><p><a href="TracerProviderError.html" class="tsd-kind-class">TracerProviderError</a> if it&#39;s already defined.</p>
 
-<h4>Remarks</h4><p>This doesn&#39;t validade the host yet, simply assumes it&#39;s correct...
-By default it uses <a href="http://localhost:4318/v1/traces">http://localhost:4318/v1/traces</a>.</p>
+<h4>Remarks</h4><p>This doesn&#39;t validate the host yet, simply assumes it&#39;s correct...
+By default it uses localhost:4318.</p>
 </div><aside class="tsd-sources">
 <ul>
 <li>Defined in src/telemetry/tracer.ts:55</li></ul></aside></li></ul></section></section></div>

@@ -41,16 +41,16 @@ class ModularTracer {
     private static instances: Map<string, ModularTracer>;
 
     /**
-     * Initializes the tracer provider and its OTEL exporter. 
+     * Initializes the tracer provider and its OpenTelemetry exporter. 
      *
      * @param moduleName - tracer name.
-     * @param host - `<host>:<port>` of the OTEL collector.
+     * @param host - `<host>:<port>` of the OpenTelemetry Collector.
      *
      * @throws {@link TracerProviderError} if it's already defined.
      *
      * @remarks
-     * This doesn't validade the host yet, simply assumes it's correct...
-     * By default it uses http://localhost:4318/v1/traces.
+     * This doesn't validate the host yet, simply assumes it's correct...
+     * By default it uses localhost:4318.
      */
     public static setup(moduleName: string, host?: string): void {
         if (ModularTracer.traceProvider !== undefined) {
@@ -92,7 +92,7 @@ class ModularTracer {
      *
      * @param name - tracer name.
      * @param storage - context storage.
-     * @returns a ModularTracer.
+     * @returns an instance of ModularTracer.
      *
      * @throws {@link UninitializedTracerProviderError} if {@link setup} wasn't called yet.
      */
@@ -129,10 +129,10 @@ class ModularTracer {
     }
 
     /**
-     * Creates a new span associated with its parent.
+     * Creates a new span.
      *
      * @remarks
-     * Returns an independent span if there isn't a parent in the current context.
+     * Returns an independent span if there isn't a parent in the current context, or it wasn't given in the `ctx` parameter.
      */
     private createSpan(
         name: string, 
@@ -153,13 +153,13 @@ class ModularTracer {
      * @param fn - function tied to the span.
      * @param [options={}]  - additional parameters to attach at span creation.
      * @param [endSpan=true] - tells if the span should be ended internaly or not.
-     * @param [rethrow=true]  - indicates if the catched exception should be rethrow or not.
+     * @param [rethrow=true]  - indicates if the catched exception should be rethrown or not.
      *
      * @return the result of fn.
      * 
      * @remarks
      * You don't need to explicitly end the span, this function does it for you.
-     * If {@link startAsyncSpan} isn't called inside an active span (without options.ctx set), it creates an indepentent one.
+     * If {@link startAsyncSpan} isn't called inside an active span (without Options.ctx set), it creates an indepentent one.
      */
     public async startAsyncSpan(
         name: string, 

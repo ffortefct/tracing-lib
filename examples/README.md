@@ -12,7 +12,7 @@ You need to have [Docker](https://docs.docker.com/get-started/overview/) and [Do
 yarn install
 ```
 
-**2.** Launch the [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) and [Jaeger](https://www.jaegertracing.io/docs/1.46/) in background:
+**2.** Launch the [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) and [Jaeger](https://www.jaegertracing.io/docs/1.46/) in detached mode (i.e., background):
 
 ```sh
 yarn run docker:upd
@@ -36,7 +36,7 @@ yarn run docker:down
 
 #### | Jaeger Note
 
-Refresh the page if the `Service` doesn't contain yet one named `demo` after you have issued requests the endpoints.
+Refresh the page if the `Service` doesn't contain yet the `demo` after you have issued requests to the endpoints.
 
 ![image](images/jaeger-example.png)
 

@@ -62,9 +62,7 @@ const tracer: ModularTracer = ModularTracer.get("whatever-you-want");
 
 `startAsyncSpan` contains additional parameters (which are't present in the `startActiveSpan` method from the official API) that you can use to fine tune the span.
 
-Read the [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/) to see limitations and accepted types.
-
-If some error is thrown inside a span function, it registers the traceback in the span' log. The exception is rethrown by default (`demo` has an example of it).
+If some error is thrown inside a span function, it registers the traceback in the span's log. The exception is rethrown by default (`demo` has an example of it).
 
 ```typescript
 import { ModularSpan } from "@ffortefct/tracing-lib";
@@ -77,7 +75,7 @@ await tracer.startAsyncSpan(
         // You can specify attributes.
         ms.setAttributes({a: "me", "b.attr": 1234});
 
-        // Spans can be nested (correlation is done automatically).
+        // Spans can be nested (relation between them is done automatically).
         await tracer.startAsyncSpan(
             "nested", async (ms: ModularSpan): Promise<void> => {
                 dbInstance.insert({name: "car"});
@@ -104,6 +102,8 @@ await tracer.startAsyncSpan(
  */
 ```
 
+Read the [Attribute Specification](https://opentelemetry.io/docs/specs/otel/common/) to see limitations and accepted types.
+
 #### Propagation
 
 There're operations that involve different services (e.g., event consumption). You can use this approach to trace those cases:
@@ -117,7 +117,7 @@ const tracer = ModularTracer.get("service-1-tracer");
 // Calls the ModularTracer.currentContext method 
 // and converts the context to a JSON object.
 const jsonCtx = tracer.marshallContext();
-// It's up to you how to send the context (e.g., HTTP header).
+// It's up to you how to send the context (e.g., event body).
 service2.sendCtx(jsonCtx);
 ```
 
