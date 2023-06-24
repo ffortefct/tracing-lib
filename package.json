@@ -1,7 +1,7 @@
 {
   "name": "@ffortefct/tracing-lib",
-  "version": "1.1.0",
-  "description": "OpenTelemetry API Wrapper",
+  "version": "1.1.1",
+  "description": "OpenTelemetry Node.js API Wrapper written in TypeScript",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
@@ -9,6 +9,17 @@
   },
   "author": "Francisco Braço-Forte",
   "license": "MIT",
+  "keywords": [
+    "TypeScript",
+    "OpenTelemetry"
+  ],
+  "bugs": {
+    "url": "https://github.com/ffortefct/tracing-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ffortefct/tracing-lib.git"
+  },
   "devDependencies": {
     "@types/node": "^20.2.6",
     "typedoc": "^0.24.8",
