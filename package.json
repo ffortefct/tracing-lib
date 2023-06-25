@@ -1,6 +1,6 @@
 {
   "name": "@ffortefct/tracing-lib",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "OpenTelemetry Node.js API Wrapper written in TypeScript",
   "main": "src/index.ts",
   "scripts": {
