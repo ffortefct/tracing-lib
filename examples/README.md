@@ -6,6 +6,8 @@ You need to have [Docker](https://docs.docker.com/get-started/overview/) and [Do
 
 #### | Four steps
 
+You can use `npm` as well.
+
 **1.** Install demo dependencies locally:
 
 ```sh

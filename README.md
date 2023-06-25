@@ -32,6 +32,12 @@ s3
 yarn add @ffortefct/tracing-lib
 ```
 
+You can use `npm` as well.
+
+```sh
+npm i @ffortefct/tracing-lib
+```
+
 ### Instrumenting
 
 I'll give you a brief insight on how to instrument your code using this wrapper, since the logic is practically the same as the official API.
